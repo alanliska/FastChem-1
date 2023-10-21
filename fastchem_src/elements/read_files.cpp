@@ -119,7 +119,7 @@ bool ElementData<double_type>::readElementAbundances(const std::string& file_pat
 
     input >> symbol >> abundance;
 
-    abundance = std::pow(10., abundance - 12.);
+    // abundance = std::pow(10., abundance - 12.);
 
     setAbundance(symbol, abundance);
 

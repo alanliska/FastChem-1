@@ -269,11 +269,11 @@ void FastChem<double_type>::setParameter(const std::string& parameter, const dou
       break;
 
     case ParameterFloat::element_minlimit:
-      options.element_density_minlimit = std::pow(10.0, value);
+      options.element_density_minlimit = value;
       break;
 
     case ParameterFloat::molecule_minlimit:
-      options.molecule_density_minlimit = std::pow(10.0, value);
+      options.molecule_density_minlimit = value;
       break;
 
     case ParameterFloat::logK_limit:

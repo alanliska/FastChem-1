@@ -1,6 +1,7 @@
 #Basic element data based on Meija et al. (2016), Atomic weights of the elements 2013, IUPAC Technical Report
 e-	Electron	5.4857990907e-4
 H	Hydrogen	1.008
+D	Deuterium	2.0141
 He	Helium		4.002602
 Li	Lithium		6.94
 Be	Beryllium	9.0121831
@@ -83,5 +84,16 @@ Hg	Mercury		200.59
 Tl	Thallium	204.3833
 Pb	Lead		207.2
 Bi	Bismuth		208.9804
+Po	Polonium	209
+At	Astatine	210
+Rn	Radon		222
+Fr	Francium	223
+Ra	Radium		226
+Ac	Actinium	227
 Th	Thorium		232.0381
+Pa	Protactinium	231
 U	Uranium		238.0289
+Np	Neptunium	237
+Pu	Plutonium	244
+Am	Americium	243
+Cm	Curium		247

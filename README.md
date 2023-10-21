@@ -1,6 +1,34 @@
 # FastChem Cond (FastChem 3.0) #
 #### Authors: Daniel Kitzmann, Joachim Stock ####
 
+#### This is the FastChem Cond fork used in the mobile app PHREEQC plus ####
+
+# Changes in this fork #
+
+* fastchem_get_set.cpp
+options.element_density_minlimit = std::pow(10.0, value);
+changed to
+options.element_density_minlimit = value;
+
+options.molecule_density_minlimit = std::pow(10.0, value);
+changed to
+options.molecule_density_minlimit = value;
+
+* read_files.cpp
+commented line
+abundance = std::pow(10., abundance - 12.);
+
+* options.h
+bool cond_use_data_validity_limits = true;
+changed to
+bool cond_use_data_validity_limits = false;
+
+* chemical_elements.dat
+added D and heavy elements
+
+* chemical_element_data.h
+added D and heavy elements
+
 # Overview #
 
 FastChem is an equilibrium chemistry code that calculates the chemical composition of the gas and condensed phase for given temperatures and pressures. The calculation of the gas phase is based on a semi-analytic approach, described in detail in Stock et al. (2018) and Stock et al. (2022). The new version 3.0 version of FastChem, called FastChem Cond, adds condensation to the code. It can now compute the chemical composition using equilibrium condensation or the rainout approximation that is commonly used in the field of exoplanets or brown dwarfs. FastChem Cond is described in detail in Kitzmann, Stock & Patzer (2023).
@@ -27,4 +55,3 @@ This project is Copyright (c) Daniel Kitzmann and Joachim Stock.
 FastChem is released under the GNU Public Licence (GPL) 3.0. That means, it can be freely copied, edited, and re-distributed. If the code is re-distributed it has to be released under at least a GPL 3.0 licence as well. The full licence of FastChem can be found in the repository *licence.md* file or under https://www.gnu.org/licenses/gpl-3.0.html.
 
 The user guide is released under the Creative Commons Licence (CC BY SA). Licensees may copy and distribute the work and make derivative works based on it only if they give the authors (Daniel Kitzmann & Joachim Stock) the credits by providing a reference to the original guide and this GitHub repository. Licensees may also distribute derivative works only under a license identical to ("not more restrictive than") the license that governs the original work.
-

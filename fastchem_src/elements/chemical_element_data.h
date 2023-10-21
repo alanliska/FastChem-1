@@ -32,6 +32,7 @@ namespace fastchem {
 const std::vector<ChemicalElementData> standard_chemical_element_data{ 
   {"e-", "Electron", 5.4857990907e-4, 0.0},
   {"H",  "Hydrogen", 1.008,  0.0},
+  {"D",  "Deuterium", 2.0141,  0.0},
   {"He", "Helium", 4.002602, 0.0},
   {"Li", "Lithium", 6.94, 0.0},
   {"Be", "Beryllium", 9.0121831, 0.0},
@@ -114,8 +115,19 @@ const std::vector<ChemicalElementData> standard_chemical_element_data{
   {"Tl", "Thallium", 204.3833, 0.0},
   {"Pb", "Lead", 207.2, 0.0},
   {"Bi", "Bismuth", 208.9804, 0.0},
+  {"Po", "Polonium", 209, 0.0},
+  {"At", "Astatine", 210, 0.0},
+  {"Rn", "Radon", 222, 0.0},
+  {"Fr", "Francium", 223, 0.0},
+  {"Ra", "Radium", 226, 0.0},
+  {"Ac", "Actinium", 227, 0.0},
   {"Th", "Thorium", 232.0381, 0.0},
-  {"U",  "Uranium", 238.0289, 0.0}
+  {"Pa", "Protactinium", 231, 0.0},
+  {"U",  "Uranium", 238.0289, 0.0},
+  {"Np",  "Neptunium", 237, 0.0},
+  {"Pu",  "Plutonium", 244, 0.0},
+  {"Am",  "Americium", 243, 0.0},
+  {"Cm",  "Curium", 247, 0.0}
   };
 
 }
