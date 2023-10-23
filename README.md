@@ -29,6 +29,48 @@ added D and heavy elements
 * chemical_element_data.h
 added D and heavy elements
 
+# Compilation #
+
+* arm
+export CC=/path/to/armv7a-linux-androideabi33-clang
+export CXX=/path/to/armv7a-linux-androideabi33-clang++
+export LDFLAGS=-static-libstdc++
+cd FastChem
+mkdir build
+cd build
+cmake ..
+make
+
+* aarch64
+export CC=/path/to/aarch64-linux-android33-clang
+export CXX=/path/to/aarch64-linux-android33-clang++
+export LDFLAGS=-static-libstdc++
+cd FastChem
+mkdir build
+cd build
+cmake ..
+make
+
+* x86
+export CC=/path/to/i686-linux-android33-clang
+export CXX=/path/to/i686-linux-android33-clang++
+export LDFLAGS=-static-libstdc++
+cd FastChem
+mkdir build
+cd build
+cmake ..
+make
+
+* x86_64
+export CC=/path/to/x86_64-linux-android33-clang
+export CXX=/path/to/x86_64-linux-android33-clang++
+export LDFLAGS=-static-libstdc++
+cd FastChem
+mkdir build
+cd build
+cmake ..
+make
+
 # Overview #
 
 FastChem is an equilibrium chemistry code that calculates the chemical composition of the gas and condensed phase for given temperatures and pressures. The calculation of the gas phase is based on a semi-analytic approach, described in detail in Stock et al. (2018) and Stock et al. (2022). The new version 3.0 version of FastChem, called FastChem Cond, adds condensation to the code. It can now compute the chemical composition using equilibrium condensation or the rainout approximation that is commonly used in the field of exoplanets or brown dwarfs. FastChem Cond is described in detail in Kitzmann, Stock & Patzer (2023).
