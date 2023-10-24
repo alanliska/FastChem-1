@@ -3,22 +3,15 @@
 ## Changes in this fork
 
 * fastchem_get_set.cpp::
-options.element_density_minlimit = std::pow(10.0, value);
-changed to
-options.element_density_minlimit = value;
+options.element_density_minlimit = std::pow(10.0, value); changed to options.element_density_minlimit = value;
 
-options.molecule_density_minlimit = std::pow(10.0, value);
-changed to
-options.molecule_density_minlimit = value;
+options.molecule_density_minlimit = std::pow(10.0, value); changed to options.molecule_density_minlimit = value;
 
 * read_files.cpp::
-commented line
-abundance = std::pow(10., abundance - 12.);
+commented line abundance = std::pow(10., abundance - 12.);
 
 * options.h::
-bool cond_use_data_validity_limits = true;
-changed to
-bool cond_use_data_validity_limits = false;
+bool cond_use_data_validity_limits = true; changed to bool cond_use_data_validity_limits = false;
 
 * chemical_elements.dat::
 added D and heavy elements
