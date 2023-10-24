@@ -1,11 +1,8 @@
-# FastChem Cond (FastChem 3.0) #
-#### Authors: Daniel Kitzmann, Joachim Stock ####
+# This is the FastChem Cond fork used in the mobile app PHREEQC plus
 
-#### This is the FastChem Cond fork used in the mobile app PHREEQC plus ####
+## Changes in this fork
 
-# Changes in this fork #
-
-* fastchem_get_set.cpp
+* fastchem_get_set.cpp::
 options.element_density_minlimit = std::pow(10.0, value);
 changed to
 options.element_density_minlimit = value;
@@ -14,62 +11,76 @@ options.molecule_density_minlimit = std::pow(10.0, value);
 changed to
 options.molecule_density_minlimit = value;
 
-* read_files.cpp
+* read_files.cpp::
 commented line
 abundance = std::pow(10., abundance - 12.);
 
-* options.h
+* options.h::
 bool cond_use_data_validity_limits = true;
 changed to
 bool cond_use_data_validity_limits = false;
 
-* chemical_elements.dat
+* chemical_elements.dat::
 added D and heavy elements
 
-* chemical_element_data.h
+* chemical_element_data.h::
 added D and heavy elements
 
-# Compilation #
+## Compilation
 
 * arm
-export CC=/path/to/armv7a-linux-androideabi33-clang
-export CXX=/path/to/armv7a-linux-androideabi33-clang++
-export LDFLAGS=-static-libstdc++
-cd FastChem
-mkdir build
-cd build
-cmake ..
-make
+
+```bash
+$ export CC=/path/to/armv7a-linux-androideabi33-clang
+$ export CXX=/path/to/armv7a-linux-androideabi33-clang++
+$ export LDFLAGS=-static-libstdc++
+$ cd FastChem
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+```
 
 * aarch64
-export CC=/path/to/aarch64-linux-android33-clang
-export CXX=/path/to/aarch64-linux-android33-clang++
-export LDFLAGS=-static-libstdc++
-cd FastChem
-mkdir build
-cd build
-cmake ..
-make
+```bash
+$ export CC=/path/to/aarch64-linux-android33-clang
+$ export CXX=/path/to/aarch64-linux-android33-clang++
+$ export LDFLAGS=-static-libstdc++
+$ cd FastChem
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+```
 
 * x86
-export CC=/path/to/i686-linux-android33-clang
-export CXX=/path/to/i686-linux-android33-clang++
-export LDFLAGS=-static-libstdc++
-cd FastChem
-mkdir build
-cd build
-cmake ..
-make
+```bash
+$ export CC=/path/to/i686-linux-android33-clang
+$ export CXX=/path/to/i686-linux-android33-clang++
+$ export LDFLAGS=-static-libstdc++
+$ cd FastChem
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+```
 
 * x86_64
-export CC=/path/to/x86_64-linux-android33-clang
-export CXX=/path/to/x86_64-linux-android33-clang++
-export LDFLAGS=-static-libstdc++
-cd FastChem
-mkdir build
-cd build
-cmake ..
-make
+```bash
+$ export CC=/path/to/x86_64-linux-android33-clang
+$ export CXX=/path/to/x86_64-linux-android33-clang++
+$ export LDFLAGS=-static-libstdc++
+$ cd FastChem
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+```
+
+# ORIGINAL DESCRIPTION:
+
+# FastChem Cond (FastChem 3.0) #
+#### Authors: Daniel Kitzmann, Joachim Stock ####
 
 # Overview #
 
