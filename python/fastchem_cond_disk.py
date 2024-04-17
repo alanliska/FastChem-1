@@ -45,10 +45,8 @@ fastchem = pyfastchem.FastChem(
 
 #for this calculation, we need to change some of FastChem's internal parameters
 fastchem.setParameter('condSolveFullSystem', np.bool_(True))
-fastchem.setParameter('minDensityExponentElement', -4920.0)
+fastchem.setParameter('minDensityExponentElement', -3000.0)
 fastchem.setParameter('maxLogK', 10000.0)
-fastchem.setParameter('accuracyChem', 1e-5)
-fastchem.setParameter('accuracyCond', 1e-5)
 
 
 #create the input and output structures for FastChem

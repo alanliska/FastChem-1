@@ -1,6 +1,6 @@
 /*
 * This file is part of the FastChem code (https://github.com/exoclime/fastchem).
-* Copyright (C) 2022 Daniel Kitzmann, Joachim Stock
+* Copyright (C) 2024 Daniel Kitzmann, Joachim Stock
 *
 * FastChem is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -269,10 +269,12 @@ void FastChem<double_type>::setParameter(const std::string& parameter, const dou
       break;
 
     case ParameterFloat::element_minlimit:
+//      options.element_density_minlimit = std::pow(10.0, value);
       options.element_density_minlimit = value;
       break;
 
     case ParameterFloat::molecule_minlimit:
+//      options.molecule_density_minlimit = std::pow(10.0, value);
       options.molecule_density_minlimit = value;
       break;
 
@@ -362,6 +364,10 @@ void FastChem<double_type>::setParameter(const std::string& parameter, const uns
 
     case ParameterInt::nb_max_newton_iter:
       options.nb_max_newton_iter = value;
+      break;
+
+    case ParameterInt::nb_switch_to_newton:
+      options.nb_switch_to_newton = value;
       break;
   
     default:

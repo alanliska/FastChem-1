@@ -185,10 +185,10 @@ structure:
   species’ sum formula. In the standard ``FastChem`` files, we use the
   modified Hill notation for the formulas. Isomeric species would in
   principle have the same formula in the Hill notation. For example, the
-  two species and would both be referred to as ``C1H1N1``. To
+  two species ``HCN`` and ``HNC`` would both be referred to as ``C1H1N1``. To
   distinguish the two in the standard set of ``FastChem``, underscores
-  are used, such that ``C1H1N1_1`` refers to , while ``C1H1N1_2``
-  represents . The use of the Hill notation is not a requirement. In a
+  are used, such that ``C1H1N1_1`` refers to ``HCN``, while ``C1H1N1_2``
+  represents ``HNC``. The use of the Hill notation is not a requirement. In a
   custom version of the species file, a different chemical notation
   could be used.
 | The sum formula is followed by an optional name for the species, for
@@ -464,8 +464,8 @@ is a header that describes the content of each column.
 
 The first and second column contain the pressure in bar and the
 temperature in K, respectively. The third column lists the total number
-density of all atoms :math:`i`, i.e.
-:math:`n_\mathrm{tot} = \sum_i \left( n_i + \sum_j n_j \nu_{ij} + \sum_c n_c \nu_{ic} \right)`,
+density of all atoms :math:`j`, i.e.
+:math:`n_\mathrm{tot} = \sum_j \left( n_j + \sum_i \nu_{ij} n_i + \sum_c \nu_{cj} n_c \right)`,
 summed over their atomic number densities, as well as the ones contained
 in all other molecules/ions :math:`j` and the fictitious number
 densities of the condensate species :math:`n_c`. This is usually only a

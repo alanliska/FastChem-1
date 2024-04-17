@@ -1,6 +1,6 @@
 /*
 * This file is part of the FastChem code (https://github.com/exoclime/fastchem).
-* Copyright (C) 2022 Daniel Kitzmann, Joachim Stock
+* Copyright (C) 2024 Daniel Kitzmann, Joachim Stock
 *
 * FastChem is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -99,7 +99,7 @@ template <class double_type>
 void Element<double_type>::checkN(
   const double_type& min_limit, const double_type& gas_density)
 {
-  if (this->number_density < min_limit) this->number_density = min_limit;
+  if (this->number_density < min_limit && !this->fixed_by_condensation) this->number_density = min_limit;
 
   if (this->number_density > gas_density) this->number_density = gas_density;
 }
@@ -189,7 +189,6 @@ bool Element<double_type>::checkElementConservation(
   else
     element_conserved = 0;
 
-  //if (!element_conserved) exit(0);
   return element_conserved;
 }
 
